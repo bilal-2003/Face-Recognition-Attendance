@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Face Recognition</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <form action="#">
+      <h2>Login</h2>
+        <div class="input-field">
+        <input type="text" name="username" required>
+        <label>Enter your UserName</label>
+      </div>
+      <div class="input-field">
+        <input type="password" name="password" required>
+        <label>Enter your password</label>
+      </div>
+      <div class="forget">
+        <label for="remember">
+          <input type="checkbox" id="remember">
+          <p>Remember me</p>
+        </label>
+        <button type="submit" onclick="check(this.form)" value="Log In">Log In</button>
+        <!--
+          <input class="bilal" type="submit" onclick="check(this.form)" value="Login"/>  
+        -->
+
+    </form>
+  </div>
+  <script language="javascript">
+    function check(form)/*function to check userid & password*/
+    {
+     /*the following code checkes whether the entered userid and password are matching*/
+     if(form.username.value == "bilal" && form.password.value == "bilal")
+      {
+        window.open('main.py')/*opens the target page while Id & password matches*/
+      }
+     else
+     {
+       alert("Error Password or Username")/*displays error message*/
+      }
+    }
+    </script>
+
+</body>
+</html>
